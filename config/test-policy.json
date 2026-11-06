@@ -1,0 +1,53 @@
+{
+  "$comment": [
+    "Feature-gating matrix: env -> feature -> enabled.",
+    "A test tagged with a feature that is absent from this matrix FAILS LOUDLY",
+    "(a typo in a feature tag must never silently disable a test).",
+    "A feature that is present but disabled causes the test to be skipped.",
+    "Read through TEST_ENV — see src/shared/policy.ts."
+  ],
+  "envs": {
+    "demo": {
+      "features": {
+        "auth": true,
+        "dashboard": true,
+        "shipments_list": true,
+        "shipments_drafts": true,
+        "orders": true,
+        "address_book": true,
+        "api_access": true,
+        "account_settings": true,
+        "mobile_web": true,
+        "mobile_navigation": true
+      }
+    },
+    "staging": {
+      "features": {
+        "auth": true,
+        "dashboard": true,
+        "shipments_list": true,
+        "shipments_drafts": true,
+        "orders": true,
+        "address_book": true,
+        "api_access": true,
+        "account_settings": true,
+        "mobile_web": true,
+        "mobile_navigation": true
+      }
+    },
+    "release": {
+      "features": {
+        "auth": true,
+        "dashboard": true,
+        "shipments_list": true,
+        "shipments_drafts": true,
+        "orders": true,
+        "address_book": true,
+        "api_access": true,
+        "account_settings": true,
+        "mobile_web": true,
+        "mobile_navigation": true
+      }
+    }
+  }
+}
